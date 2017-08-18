@@ -1,24 +1,17 @@
 language: go
 go:
-- 1.6
 - 1.7
-- 1.8
 os:
 - linux
-
-# safelist
 branches:
   only:
   - master
-
 install:
-- make deps
-- make install
-
-script:
-- make test
-
+- make build
 deploy:
   provider: heroku
   api_key:
-        secure: L6W/VpXLYDJp347+wmd9mbWGRbcMpH8Zc/l5Hio+w477a1uXFZ1wfrOeoC025ZCmbjkfgZru/xV8ArL4N+WjI1sXcwV6sBdFlr5CZ+qR578eL2AryZOpMCl0MPQNC4BM1Q+cYciOwo2NfFlX972+iQc+Xef/9iHc6cEJnTXAsG+vIZoeU+KFLJwVZyZmbk/d7q7KAGZNMi1D9FBC/1/JRrTEpJaRj2Z+ukSRDKDhL00UvEUAcuwuktXr99N5AvLW2mMIVX7hH4dU5Cx2F8i2b/zwAh2lbmYolpAXDzlwkhYUggqo2O5o5G2/PG5sb3Bsqof12Bzoj+XUb+SuemY6fRjfPYnVUDVrlSi2q452h1fYvI5SaX6l3jFhvLekTZdJ9ZnUOPo4SYGDASaFv9dx+YmiQlfilghxhFWu043rAzx6YSbDEODjchtVrLJia3Jww940S23W+U2lxZPaC2HM99+/AmYTYiBp88bE+2DjRBucy+wjgn0DNqUQdeaHQwF4NHh0QRp7PcS5utsPgUEPrfHQYSYGqkHYQPRYkpvvgytDFrd83S4MmAjCD1jwSq0/UmuhPhTn09patM9ewOqLONZvMyLGd38s7Ygv9al2gDmYq9dytoEvcelB28/MqSE0+WV29knot5sZZ5bFA4Jw9DKF9gsAUtywQiATmfgNUgE=
+    secure: HCTONKa+AZPySaKdXuMi3BtGwDfF5brd34Vhp+4+ho4x6UeWO9iVW/Wpm0IgpHw6NVYoivDXg9mG4DjB8xa9QmSpuV+mCC19iJOF/DxavzfIAzx6eoW6+bjlFxi2EOgrolxbNOKcNGP6yTZqeKAAFwbZixBKemMUPiT6AP8Cx474PMYWCQtmQQwjIxgJynFjD1bVZr1RKoP9HccEz2AQo6dH6b77AZsaWDMiDRhjuusMTflLP30EoxoJA3YSFw9kqBMUeEoYZLsiCHrZHamgQyIf19UVWqzJ1II2fn+9tx2irmLBFTNzqNORPFiDC8NfIa6fr7p6ShiaEeD0GFigEh3AlmffUpTiEkF9NCQ6NAeXSHIiqD3GBYAZiHJYRRAaZx9CbJjFdRXrQwUriqK86pxm2DQw5knGhCCFEgl/inyBw0KyamN+QjfKiD4tCjs7woBBnj5tXw6bDQWZHiLXhkJobY69CAJbFK2QGNbbceMYfUqjmw3Z7zuSb3O6HXyttSgJ25ozJkURqUpTpklTjER8ezRZic906GXdzUz0AVTC7VW6SwvyLUsarEu/9fZoXgIqHQUcaV43Z3hYqIeaECUhm7UZRFt0hGniso8iA3t8+tSP9nPlOn4wWe4T2jCHMriQ5G8v6P+Pg5Pmv1TaVQdSh+S8CqKzdeglo5dtyZo=
+  app: radiant-brook-62510
+  on:
+    repo: 0xFranckx0/go-proxy-search
