@@ -1,6 +1,17 @@
 {
 	"comment": "",
 	"ignore": "test",
-	"package": [],
+	"package": [
+		{
+			"path": "github.com/0xFran:qckx0/go-proxy-search/pkg/rest",
+			"revision": ""
+		},
+		{
+			"checksumSHA1": "U3AOGtbaKBhhJ93WUdlAmMHBl8k=",
+			"path": "github.com/0xFranckx0/go-proxy-search/pkg/rest",
+			"revision": "6f7e28c4d6a893791a243a497f98d32b8616ce53",
+			"revisionTime": "2017-08-19T02:34:00Z"
+		}
+	],
 	"rootPath": "github.com/go-proxy-search"
 }

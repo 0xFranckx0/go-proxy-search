@@ -9,6 +9,20 @@
 		{
 			"ImportPath": "github.com/0xFranckx0/go-proxy-search/pkg/rest",
 			"Rev": "e2ac6b67d3b90c3737e2f51f41f48e2ab9cd35d5"
+		},
+		{
+			"ImportPath": "github.com/Sirupsen/logrus",
+			"Comment": "v0.11.4",
+			"Rev": "0208149b40d863d2c1a2f8fe5753096a9cf2cc8b"
+		},
+		{
+			"ImportPath": "github.com/gorilla/mux",
+			"Comment": "v1.3.0-5-g599cba5",
+			"Rev": "599cba5e7b6137d46ddf58fb1765f5d928e69604"
+		},
+		{
+			"ImportPath": "golang.org/x/sys/unix",
+			"Rev": "43e60d72a8e2bd92ee98319ba9a384a0e9837c08"
 		}
 	]
 }
