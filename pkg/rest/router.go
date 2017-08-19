@@ -1,14 +1,13 @@
 package rest
 
 import (
-	//"encoding/json"
+	"encoding/json"
 	"fmt"
-	//log "github.com/Sirupsen/logrus"
-	//"github.com/gorilla/mux"
-	//"net/http"
+	log "github.com/Sirupsen/logrus"
+	"github.com/gorilla/mux"
+	"net/http"
 )
 
-/*
 func NewRouter() *mux.Router {
 	router := mux.NewRouter().StrictSlash(true)
 	router.Methods("GET").Path("/version").Handler(http.HandlerFunc(versionHandler))
@@ -31,7 +30,7 @@ func versionHandler(w http.ResponseWriter, r *http.Request) {
 			"handler": "VersionHandler"}).Fatal(err)
 	}
 }
-*/
+
 func Toto() {
 	fmt.Println("SALUT")
 }
