@@ -2,6 +2,6 @@
 
 
 build: deps
-	go build -o proxy cmd/proxy.go 
+	go build -o proxy proxy.go 
 deps:
 	go get ./... 
