@@ -1,1 +1,1 @@
-web: bin/go-proxy-search
+web: go-proxy-search
