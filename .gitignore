@@ -4,7 +4,7 @@
 *.so
 *.dylib
 proxy
-
+go-proxy-search
 # Test binary, build with `go test -c`
 *.test
 

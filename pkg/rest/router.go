@@ -2,21 +2,23 @@ package rest
 
 import (
 	"encoding/json"
-	"fmt"
-	log "github.com/Sirupsen/logrus"
+	"github.com/Sirupsen/logrus"
 	"github.com/gorilla/mux"
 	"net/http"
 )
 
-func NewRouter() *mux.Router {
+func init() {
+	logrus.SetFormatter(&logrus.JSONFormatter{})
+}
+
+func StartRouter() *mux.Router {
 	router := mux.NewRouter().StrictSlash(true)
 	router.Methods("GET").Path("/version").Handler(http.HandlerFunc(versionHandler))
+
 	return router
 }
 
 func versionHandler(w http.ResponseWriter, r *http.Request) {
-	log.SetFormatter(&log.JSONFormatter{})
-
 	type versionJson struct {
 		Version string `json:"version"`
 	}
@@ -26,11 +28,7 @@ func versionHandler(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 
 	if err := json.NewEncoder(w).Encode(ver); err != nil {
-		log.WithFields(log.Fields{
+		logrus.WithFields(logrus.Fields{
 			"handler": "VersionHandler"}).Fatal(err)
 	}
-}
-
-func Toto() {
-	fmt.Println("SALUT")
 }
