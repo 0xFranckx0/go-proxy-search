@@ -1,20 +1,16 @@
 package main
 
 import (
-	"fmt"
 	r "github.com/0xFranckx0/go-proxy-search/pkg/rest"
-	//log "github.com/Sirupsen/logrus"
-	//"net/http"
+	log "github.com/Sirupsen/logrus"
+	"net/http"
 	"os"
 )
 
 func main() {
-	fmt.Println(os.Getenv("MSG"))
-	fmt.Println("Hello World!")
-	r.Toto()
-	//r.NewRouter()
-	//err := http.ListenAndServe(":8080", r.NewRouter())
-	//if err != nil {
-	//	log.Fatal(err)
-	//}
+	r.NewRouter()
+	err := http.ListenAndServe(":"+os.Getenv("PORT"), r.NewRouter())
+	if err != nil {
+		log.Fatal(err)
+	}
 }
