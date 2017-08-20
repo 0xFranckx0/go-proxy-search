@@ -7,7 +7,7 @@ curl -XGET -v https://calm-lowlands-40938.herokuapp.com/1/usage/top_search?size=
 Result:
 {"searchCount":72,"lastSearchAt":"2017-08-20T19:00:00.000Z","topSearches":[{"query":"price","count":31,"avgHitCountWithoutTypos":1,"avgHitCount":254},{"query":"streaming media","count":19,"avgHitCountWithoutTypos":55,"avgHitCount":55},{"query":"10","count":6,"avgHitCountWithoutTypos":1000,"avgHitCount":3352},{"query":"amazon","count":2,"avgHitCountWithoutTypos":39,"avgHitCount":55},{"query":"ama","count":1,"avgHitCountWithoutTypos":80,"avgHitCount":80}]}
 ```
-```python
+```shell
 curl -XGET -v https://calm-lowlands-40938.herokuapp.com/1/search?query=price
 
 Truncated result:
