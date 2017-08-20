@@ -7,10 +7,16 @@
 			"revision": ""
 		},
 		{
-			"checksumSHA1": "U3AOGtbaKBhhJ93WUdlAmMHBl8k=",
+			"checksumSHA1": "DtVHMK99Un8hlulZ3FQNwwGnPEE=",
 			"path": "github.com/0xFranckx0/go-proxy-search/pkg/rest",
-			"revision": "9f05e7331a50ff5bc698d39eb28c398b10763d29",
-			"revisionTime": "2017-08-19T09:20:12Z"
+			"revision": "a523354f5b4df6b5a09ef1d58ead2512bae35ad8",
+			"revisionTime": "2017-08-20T16:03:34Z"
+		},
+		{
+			"checksumSHA1": "RqCsNyHt7UsxAODNUtPEcEhKxkc=",
+			"path": "github.com/algolia/algoliasearch-client-go/algoliasearch",
+			"revision": "67eb2cc48411b1a552094368016f08296a76c02c",
+			"revisionTime": "2017-08-15T20:09:35Z"
 		}
 	],
 	"rootPath": "github.com/go-proxy-search"

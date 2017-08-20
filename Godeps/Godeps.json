@@ -16,6 +16,11 @@
 			"Rev": "0208149b40d863d2c1a2f8fe5753096a9cf2cc8b"
 		},
 		{
+			"ImportPath": "github.com/algolia/algoliasearch-client-go/algoliasearch",
+			"Comment": "2.17.0-3-g67eb2cc",
+			"Rev": "67eb2cc48411b1a552094368016f08296a76c02c"
+		},
+		{
 			"ImportPath": "github.com/gorilla/mux",
 			"Comment": "v1.3.0-5-g599cba5",
 			"Rev": "599cba5e7b6137d46ddf58fb1765f5d928e69604"

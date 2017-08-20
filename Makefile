@@ -1,10 +1,14 @@
-.Phony: build deps
+.Phony: install build deps local-deps
 
+
+install: build
+	go install
 
 build: deps
 	go build -o proxy proxy.go 
 deps:
 	go get golang.org/x/sys/unix
+	go get github.com/algolia/algoliasearch-client-go/algoliasearch
 	go get ./... 
 
 local-deps:
