@@ -1,4 +1,4 @@
-.Phony: install build deps local-deps
+.Phony: install build deps loc-deps
 
 install: build
 	go install
@@ -10,6 +10,6 @@ deps:
 	go get github.com/algolia/algoliasearch-client-go/algoliasearch
 	go get ./... 
 
-local-deps:
+loc-deps:
 	govendor fetch github.com/0xFranckx0/go-proxy-search/pkg/rest
 	godep save ./...
