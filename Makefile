@@ -1,4 +1,4 @@
-.Phony: install build deps  
+.Phony: install build deps test
 
 install: build
 	go install
@@ -15,3 +15,6 @@ deps:
 	govendor fetch github.com/0xFranckx0/go-proxy-search/pkg/rest
 	govendor fetch golang.org/x/crypto/ssh/terminal
 	godep save 
+
+test:
+	go test -run TestSearch 
