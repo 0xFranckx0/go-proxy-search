@@ -1,6 +1,5 @@
 .Phony: install build deps local-deps
 
-
 install: build
 	go install
 

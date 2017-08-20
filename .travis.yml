@@ -1,13 +1,16 @@
 language: go
 go:
-- 1.7
+  - 1.7
 os:
-- linux
+  - linux
 branches:
   only:
   - master
+before_install:
+  - go get -u github.com/kardianos/govendor
+  - go get github.com/tools/godep
 install:
-- make build
+  - make install 
 deploy:
   provider: heroku
   api_key:
