@@ -15,4 +15,3 @@ go-proxy-search
 .glide/
 
 deploy.api
-.env
