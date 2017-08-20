@@ -8,40 +8,48 @@ import (
 	"testing"
 )
 
-func TestVersion(t *testing.T) {
-	req, _ := http.NewRequest("GET", "/version", nil)
-	resp := sendReq(req)
+func TestSearch(t *testing.T) {
+	fetchApi(t, "GET", "/1/search", "query", "price", "hits")
+}
 
-	chkRespCode(t, http.StatusOK, resp.Code)
+func TestTopSearch(t *testing.T) {
+	fetchApi(t, "GET", "/1/usage/top_search", "size", "10", "topSearches")
+}
+
+func fetchApi(t *testing.T, method string, path string, key string, value string, pattern string) {
+	req, _ := http.NewRequest(method, path, nil)
+
+	q := req.URL.Query()
+	q.Add(key, value)
+
+	req.URL.RawQuery = q.Encode()
+
+	resp := httptest.NewRecorder()
+	router := rest.StartRouter()
+	router.ServeHTTP(resp, req)
+
+	if http.StatusOK != resp.Code {
+		t.Errorf("NOT OK %d\n", resp.Code)
+	}
 
 	if body := resp.Body.String(); body != "" {
-		type versionJson struct {
-			Version string `json:"version"`
-		}
+		c := make(map[string]interface{})
 
-		var j versionJson
-
-		err := json.Unmarshal([]byte(body), &j)
+		err := json.Unmarshal([]byte(body), &c)
 		if err != nil {
 			t.Errorf("%s", err)
 		}
+		h := false
 
-		if j.Version != "1.0" {
-			t.Errorf("BAD VERSION %s", j.Version)
+		for s, _ := range c {
+			if s == pattern {
+				h = true
+			}
+		}
+		if !h {
+			t.Errorf("MISSING %s", pattern)
+
 		}
 	}
-}
 
-func sendReq(req *http.Request) *httptest.ResponseRecorder {
-	rec := httptest.NewRecorder()
-	router := rest.StartRouter()
-	router.ServeHTTP(rec, req)
-
-	return rec
-}
-
-func chkRespCode(t *testing.T, ok, code int) {
-	if ok != code {
-		t.Errorf("Want %d. Got %d\n", ok, code)
-	}
 }
