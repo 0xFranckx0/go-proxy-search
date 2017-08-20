@@ -7,16 +7,28 @@
 			"revision": ""
 		},
 		{
-			"checksumSHA1": "DtVHMK99Un8hlulZ3FQNwwGnPEE=",
+			"checksumSHA1": "cOuRfW0NLjW6SzhuPQQvi4DVHek=",
 			"path": "github.com/0xFranckx0/go-proxy-search/pkg/rest",
-			"revision": "a523354f5b4df6b5a09ef1d58ead2512bae35ad8",
-			"revisionTime": "2017-08-20T16:03:34Z"
+			"revision": "23b22b28843e4e720dc0cce0155520454a32ee39",
+			"revisionTime": "2017-08-20T18:39:12Z"
 		},
 		{
 			"checksumSHA1": "RqCsNyHt7UsxAODNUtPEcEhKxkc=",
 			"path": "github.com/algolia/algoliasearch-client-go/algoliasearch",
 			"revision": "67eb2cc48411b1a552094368016f08296a76c02c",
 			"revisionTime": "2017-08-15T20:09:35Z"
+		},
+		{
+			"checksumSHA1": "nqWNlnMmVpt628zzvyo6Yv2CX5Q=",
+			"path": "golang.org/x/crypto/ssh/terminal",
+			"revision": "eb71ad9bd329b5ac0fd0148dd99bd62e8be8e035",
+			"revisionTime": "2017-08-07T10:11:13Z"
+		},
+		{
+			"checksumSHA1": "LkAsnLUlAZSg3lRYk7BEyNfog3A=",
+			"path": "golang.org/x/sys/windows",
+			"revision": "43e60d72a8e2bd92ee98319ba9a384a0e9837c08",
+			"revisionTime": "2017-08-16T15:16:36Z"
 		}
 	],
 	"rootPath": "github.com/go-proxy-search"

@@ -1,11 +1,11 @@
-.Phony: install build deps clean 
+.Phony: install build deps  
 
 install: build
 	go install
 
 build: deps
 	go build -o proxy proxy.go 
-deps: clean
+deps: 
 	go get golang.org/x/sys/unix
 	go get github.com/algolia/algoliasearch-client-go/algoliasearch
 	go get github.com/Sirupsen/logrus
@@ -15,6 +15,3 @@ deps: clean
 	govendor fetch github.com/0xFranckx0/go-proxy-search/pkg/rest
 	govendor fetch golang.org/x/crypto/ssh/terminal
 	godep save 
-clean:
-	-rm -rf vendor
-	-rm -rf Godep 

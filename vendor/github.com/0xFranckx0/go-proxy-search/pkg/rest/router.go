@@ -29,7 +29,7 @@ func StartRouter() *mux.Router {
 		curl -XGET -v  http://localhost:8181/1/search?query=price
 		curl -XGET -v https://calm-lowlands-40938.herokuapp.com/1/search?query=price
 
-	You need to provide your Algolia Public API KEY as variable
+	You  need to provide your Algolia Public API KEY as variable
 */
 func searchHandler(w http.ResponseWriter, r *http.Request) {
 	params := r.URL.Query()
