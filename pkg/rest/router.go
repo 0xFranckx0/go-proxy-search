@@ -23,7 +23,7 @@ func StartRouter() *mux.Router {
 }
 
 /*
-	SearchHanlder is aimed to perfomed a search on the best_index:
+	SearchHanlder is aimed to perfom a search on the best_buy index:
 
 	usage:
 		curl -XGET -v  http://localhost:8181/1/search?query=price
@@ -55,7 +55,7 @@ func searchHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 /*
-	topSearchHanlder is aimed to perfomed a popular search a described by :
+	topSearchHanlder is aimed to perfom a popular search a described by :
 	https://www.algolia.com/doc/rest-api/analytics/#get-popular-searches
 
 	usage:
@@ -71,9 +71,7 @@ func topSearchHandler(w http.ResponseWriter, r *http.Request) {
 	params := r.URL.Query()
 	size := params["size"][0]
 	appId := "AVGXBPGE8G"
-	adminApiKey := os.Getenv("ADMIN_API_KEY")
-	logrus.WithFields(logrus.Fields{
-		"handler": "usageHandler"}).Info("API KEY", adminApiKey)
+	apiKey := os.Getenv("ADMIN_API_KEY")
 	method := "GET"
 	path := `/1/searches/best_buy/popular`
 	host := "analytics.algolia.com"
@@ -82,7 +80,7 @@ func topSearchHandler(w http.ResponseWriter, r *http.Request) {
 	headers := map[string]string{
 		"Connection":               "keep-alive",
 		"User-Agent":               "REST Proxy Go ",
-		"X-Algolia-API-Key":        adminApiKey,
+		"X-Algolia-API-Key":        apiKey,
 		"X-Algolia-Application-Id": appId,
 	}
 
