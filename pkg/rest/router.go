@@ -72,6 +72,8 @@ func topSearchHandler(w http.ResponseWriter, r *http.Request) {
 	size := params["size"][0]
 	appId := "AVGXBPGE8G"
 	adminApiKey := os.Getenv("ADMIN_API_KEY")
+	logrus.WithFields(logrus.Fields{
+		"handler": "usageHandler"}).Info("API KEY", adminApiKey)
 	method := "GET"
 	path := `/1/searches/best_buy/popular`
 	host := "analytics.algolia.com"
