@@ -5,7 +5,8 @@ os:
   - linux
 branches:
   only:
-  - master
+    - master
+    - pipeline 
 before_install:
   - go get -u github.com/kardianos/govendor
   - go get github.com/tools/godep
