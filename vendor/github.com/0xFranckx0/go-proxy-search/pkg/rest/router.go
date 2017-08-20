@@ -7,7 +7,6 @@ import (
 	"github.com/gorilla/mux"
 	"io/ioutil"
 	"net/http"
-	"os"
 )
 
 func init() {
@@ -71,7 +70,7 @@ func topSearchHandler(w http.ResponseWriter, r *http.Request) {
 	params := r.URL.Query()
 	size := params["size"][0]
 	appId := "AVGXBPGE8G"
-	apiKey := os.Getenv("ADMIN_API_KEY")
+	apiKey := "3a4c12918f44ae14fe02da969eaac85d"
 	method := "GET"
 	path := `/1/searches/best_buy/popular`
 	host := "analytics.algolia.com"
