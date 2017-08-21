@@ -5,7 +5,8 @@
 curl -XGET -v https://calm-lowlands-40938.herokuapp.com/1/usage/top_search?size=10
 
 Result:
-{"searchCount":72,"lastSearchAt":"2017-08-20T19:00:00.000Z","topSearches":[{"query":"price","count":31,"avgHitCountWithoutTypos":1,"avgHitCount":254},{"query":"streaming media","count":19,"avgHitCountWithoutTypos":55,"avgHitCount":55},{"query":"10","count":6,"avgHitCountWithoutTypos":1000,"avgHitCount":3352},{"query":"amazon","count":2,"avgHitCountWithoutTypos":39,"avgHitCount":55},{"query":"ama","count":1,"avgHitCountWithoutTypos":80,"avgHitCount":80}]}
+$ curl -XGET https://calm-lowlands-40938.herokuapp.com/1/usage/top_search?size=4
+{"topsearches":[{"avgHitCount":453,"avgHitCountWithoutTypos":405,"count":31,"query":"media"},{"avgHitCount":1404,"avgHitCountWithoutTypos":271,"count":28,"query":"compact"},{"avgHitCount":252,"avgHitCountWithoutTypos":1,"count":15,"query":"price"},{"avgHitCount":1250,"avgHitCountWithoutTypos":207,"count":14,"query":"file"}]}
 ```
 ```shell
 curl -XGET -v https://calm-lowlands-40938.herokuapp.com/1/search?query=price
@@ -14,9 +15,10 @@ Truncated result:
 {"hits":[{"_highlightResult":{"brand":{"matchLevel":"none","matchedWords":[],"value":"Sennheiser"},"categories":[{"matchLevel":"none","matchedWords":[],"value":"Audio"},{"matchLevel":"none","matchedWords":[],"value":"Headphones"},{"matchLevel":"none","matchedWords":[],"value":"On-Ear Headphones"}],...
 
 ```
-- To run locally you first need to set the ADMIN_API_KEY
+- To run locally you first need to create a keyfile file containing your Algolia admin api key
+  in the proxy binary directory. 
 ```shell
-export ADMIN_API_KEY=XXXYYYYYYYYYZZZZZZZZZAAAAAAAAA
+echo "12345234524542545145426676386" > keyfile
 ```
 
 - You also need a PORT variable:

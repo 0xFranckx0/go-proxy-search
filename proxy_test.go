@@ -13,7 +13,7 @@ func TestSearch(t *testing.T) {
 }
 
 func TestTopSearch(t *testing.T) {
-	fetchApi(t, "GET", "/1/usage/top_search", "size", "10", "topSearches")
+	fetchApi(t, "GET", "/1/usage/top_search", "size", "10", "topsearches")
 }
 
 func fetchApi(t *testing.T, method string, path string, key string, value string, pattern string) {

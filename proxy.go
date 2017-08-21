@@ -7,6 +7,13 @@ import (
 	"os"
 )
 
+/*
+
+This is the main funtion that starts the API server.
+The port on which the API server listens is set by the
+PORT environment variable.
+
+*/
 func main() {
 	log.SetFormatter(&log.JSONFormatter{})
 	log.Info("starting proxy")
